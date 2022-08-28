@@ -1,0 +1,8 @@
+{
+  "extends": "eslint:recommended",
+  "plugins": ["cypress", "eslint-plugin-html"],
+  "env": {
+    "cypress/globals": true,
+    "node": true
+  }
+}
