@@ -17,7 +17,7 @@ describe("argosScreenshot", () => {
       cy.get("[data-test-hidden]", { timeout: 0 }).should("not.be.visible");
     });
 
-    it.only("should take a screenshot with generic name", () => {
+    it("should take a screenshot with generic name", () => {
       cy.readFile(`${screenshotsFolder}/argosScreenshot before all hook.png`);
     });
   });
