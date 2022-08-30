@@ -1,6 +1,6 @@
 const screenshotsFolder = Cypress.browser.isHeaded
   ? `./cypress/screenshots/argos`
-  : `./cypress/screenshots/argos/${Cypress.spec.name}`;
+  : `./cypress/screenshots/${Cypress.spec.name}/argos`;
 
 describe("argosScreenshot", () => {
   before(() => {
