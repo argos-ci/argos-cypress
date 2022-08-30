@@ -33,15 +33,18 @@
     "test": "cypress run",
     "test:open": "cypress open --e2e -b chrome",
     "format": "prettier --write \"**/*.{js,md,json}\" ",
-    "lint": "eslint --ignore-path .gitignore ."
+    "lint": "eslint --ignore-path .gitignore .",
+    "release": "standard-version && conventional-github-releaser --preset angular"
   },
   "dependencies": {
     "cypress-wait-until": "^1.7.2"
   },
   "devDependencies": {
+    "conventional-github-releaser": "^3.1.5",
     "cypress": "^10.6.0",
     "eslint": "^8.23.0",
     "eslint-plugin-cypress": "^2.12.1",
-    "eslint-plugin-html": "^7.1.0"
+    "eslint-plugin-html": "^7.1.0",
+    "standard-version": "^9.5.0"
   }
 }
