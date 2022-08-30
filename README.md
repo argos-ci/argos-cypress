@@ -39,12 +39,15 @@ describe("Homepage", () => {
 - `name` - The screenshot name; must be unique; default value to test title
 - `options` - Send to [cy.screenshot command options](https://docs.cypress.io/api/commands/screenshot)
 
-## Helper props
+## Helper attributes
 
-The helpers props can be used to improve screenshots stability.
+The `data-visual-test` attributes allow you to control how elements behave in the Argos screenshot.
 
-- `[data-visual-test="transparent"]` - Make it transparent to Argos (`opacity: 0`)
-- `[data-visual-test="removed"]` - Remove the element from Argos (`display: none`)
+It is often used to hide changing element like dates.
+
+- `[data-visual-test="transparent"]` - Make the element transparent (`opacity: 0`)
+- `[data-visual-test="removed"]` - Remove the element (`display: none`)
+- `[data-visual-test="blackout"]` - Blacked out the element
 
 _How to use an helper to hide a div from a screenshot_
 

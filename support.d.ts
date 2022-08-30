@@ -3,6 +3,7 @@ declare namespace Cypress {
     /**
      * Stabilize the UI and takes a screenshot of the application under test.
      *
+     * @see https://on.cypress.io/screenshot
      * @example
      *    cy.argosScreenshot("my-screenshot")
      *    cy.get(".post").argosScreenshot()
