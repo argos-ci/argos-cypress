@@ -19,11 +19,9 @@
     "access": "public"
   },
   "type": "module",
-  "main": "./support.js",
-  "types": "./support.d.ts",
   "exports": {
     "./support": {
-      "require": "./support.js",
+      "import": "./support.js",
       "types": "./support.d.ts",
       "default": "./support.js"
     },
@@ -40,6 +38,7 @@
     "cypress-wait-until": "^1.7.2"
   },
   "devDependencies": {
+    "@argos-ci/cypress": "file:.",
     "conventional-github-releaser": "^3.1.5",
     "cypress": "^10.6.0",
     "eslint": "^8.23.0",

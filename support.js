@@ -66,7 +66,7 @@ Cypress.Commands.add(
       name = null;
     }
 
-    const screenshotName = `argos/${name ?? cy.state("runnable").fullTitle()}`;
+    const screenshotName = `argos/${name || cy.state("runnable").fullTitle()}`;
     Cypress.log({
       name: "argosScreenshot",
       displayName: `Argos Screenshot`,
@@ -83,7 +83,9 @@ Cypress.Commands.add(
     cy.wrap(subject).screenshot(screenshotName, {
       capture: "viewport",
       overwrite: true,
-      blackout: ['[data-visual-test="blackout"]', ...(options.blackout ?? [])],
+      blackout: ['[data-visual-test="blackout"]'].concat(
+        options.blackout || []
+      ),
       ...options,
     });
   }
