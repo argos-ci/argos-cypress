@@ -81,8 +81,6 @@ Cypress.Commands.add(
 
     // Screenshot
     cy.wrap(subject).screenshot(screenshotName, {
-      capture: "viewport",
-      overwrite: true,
       blackout: ['[data-visual-test="blackout"]'].concat(
         options.blackout || []
       ),
