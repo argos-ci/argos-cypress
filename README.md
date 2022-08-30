@@ -2,6 +2,10 @@
 
 [Cypress](https://cypress.io) commands and utilities for [Argos](https://argos-ci.com) visual testing.
 
+[![npm version](https://img.shields.io/npm/v/@argos-ci/cypress.svg)](https://www.npmjs.com/package/@argos-ci/cypress)
+[![npm dm](https://img.shields.io/npm/dm/@argos-ci/cypress.svg)](https://www.npmjs.com/package/@argos-ci/cypress)
+[![npm dt](https://img.shields.io/npm/dt/@argos-ci/cypress.svg)](https://www.npmjs.com/package/@argos-ci/cypress)
+
 ## Installation
 
 ```sh
