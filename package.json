@@ -30,7 +30,7 @@
   "scripts": {
     "test": "cypress run",
     "test:open": "cypress open --e2e -b chrome",
-    "format": "prettier --write \"**/*.{js,md,json}\" ",
+    "format": "prettier --write .",
     "lint": "eslint --ignore-path .gitignore .",
     "release": "standard-version && conventional-github-releaser --preset angular"
   },
