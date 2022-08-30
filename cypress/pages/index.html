@@ -38,9 +38,25 @@
     <main>
       <h1>Fake page</h1>
 
-      <h3>Data-test-hidden</h3>
+      <h3>data-visual-test="transparent"</h3>
       <div class="field">
-        <div data-test-hidden>This div has ".data-test-hidden" prop.</div>
+        <div data-visual-test="transparent">
+          This div has `data-visual-test="transparent"` attribute.
+        </div>
+      </div>
+
+      <h3>Hidden</h3>
+      <div class="field">
+        <div data-visual-test="hidden">
+          This div has `data-visual-test="hidden"` attribute.
+        </div>
+      </div>
+
+      <h3>Blackout</h3>
+      <div class="field">
+        <div data-visual-test="blackout">
+          This div has `data-visual-test="blackout"` attribute.
+        </div>
       </div>
 
       <h3>Loader (3s)</h3>
@@ -48,10 +64,11 @@
         <div id="loader" aria-busy="true"></div>
       </div>
 
-      <h3>Blackout</h3>
-      <div class="field">
-        <div class="blackout">This div has ".blackout" class.</div>
-      </div>
+      <h3>Red square</h3>
+      <div
+        class="red-square"
+        style="width: 100px; height: 100px; background-color: red"
+      ></div>
     </main>
 
     <script>

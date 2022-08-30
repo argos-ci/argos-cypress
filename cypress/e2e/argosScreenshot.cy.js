@@ -1,32 +1,45 @@
 const screenshotsFolder = Cypress.browser.isHeaded
-  ? `./cypress/screenshots/`
-  : `./cypress/screenshots/${Cypress.spec.name}`;
+  ? `./cypress/screenshots/argos`
+  : `./cypress/screenshots/argos/${Cypress.spec.name}`;
 
 describe("argosScreenshot", () => {
   before(() => {
     cy.visit("cypress/pages/index.html");
-    cy.argosScreenshot();
   });
 
   describe("without name", () => {
-    it("should wait for loader hiding", () => {
+    before(() => {
+      cy.argosScreenshot();
+    });
+
+    it("waits for loader hiding", () => {
       cy.get("#loader", { timeout: 0 }).should("not.exist");
     });
 
-    it("should hide hidden div", () => {
-      cy.get("[data-test-hidden]", { timeout: 0 }).should("not.be.visible");
+    it("hides div with data-visual-test attribute", () => {
+      cy.get(`[data-visual-test="transparent"]`, { timeout: 0 }).should(
+        "not.be.visible"
+      );
     });
 
-    it.only("should take a screenshot with generic name", () => {
-      cy.readFile(`${screenshotsFolder}/argosScreenshot before all hook.png`);
+    it("takes a screenshot with generic name", () => {
+      cy.readFile(
+        `${screenshotsFolder}/argosScreenshot without name before all hook.png`
+      );
     });
   });
 
   describe("with name", () => {
-    it("should take a named screenshot", () => {
-      const screenshotName = "named-screenshot";
-      cy.argosScreenshot(screenshotName);
-      cy.readFile(`${screenshotsFolder}/${screenshotName}.png`);
+    it("takes a named screenshot", () => {
+      cy.argosScreenshot("named-screenshot");
+      cy.readFile(`${screenshotsFolder}/named-screenshot.png`);
+    });
+  });
+
+  describe("component", () => {
+    it("takes a screenshot of a component with a generic name", () => {
+      cy.get(".red-square").first().argosScreenshot("red-square");
+      cy.readFile(`${screenshotsFolder}/named-screenshot.png`);
     });
   });
 });

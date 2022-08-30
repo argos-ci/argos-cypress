@@ -1,26 +1,26 @@
-# @argos/cypress
+# @argos-ci/cypress
 
 [Cypress](https://cypress.io) commands and utilities for [Argos](https://argos-ci.com) visual testing.
 
 ## Installation
 
 ```sh
-$ npm install --save-dev @argos/cypress
+npm install --save-dev @argos-ci/cypress
 ```
 
 And add this line to your `cypress/support/index.js` file.
 
-```javascript
-import "@argos/cypress";
+```js
+import "@argos-ci/cypress/support";
 ```
 
 ## Usage
 
-`cy.argosScreenshot` - command stabilize the UI before taking a screenshot.
+`cy.argosScreenshot` - command stabilizes the UI and takes a screenshot.
 
 _How to take a screenshot with `cy.argosScreenshot` command_
 
-```javascript
+```js
 describe("Homepage", () => {
   it("should be stable", () => {
     // Screenshot a full page
@@ -43,14 +43,13 @@ describe("Homepage", () => {
 
 The helpers props can be used to improve screenshots stability.
 
-- `data-test-no-radius` - remove border radius
-- `data-test-hidden` - hide from screenshot (opacity: 0)
-- `data-test-hidden="no-display"` - remove from screenshot (display: none)
+- `[data-visual-test="transparent"]` - Make it transparent to Argos (`opacity: 0`)
+- `[data-visual-test="removed"]` - Remove the element from Argos (`display: none`)
 
 _How to use an helper to hide a div from a screenshot_
 
 ```html
-<div id="clock" data-test-hidden>
+<div id="clock" data-visual-test="transparent">
   <!-- the clock code -->
 </div>
 ```

@@ -1,2 +1,2 @@
-// import "@argos/argos-cypress"
-import "../..";
+// import "@argos-ci/argos-cypress"
+import "../../support";
