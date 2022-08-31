@@ -27,10 +27,15 @@ When adding new features or modifying existing code, please attempt to include t
 You should push your local changes to your forked GitHub repository and then open a pull request from your repo to the `argos-ci/argos-cypress` repository.
 
 1. Fork the argos repository on Github
-2. Clone your fork to your local machine: `git clone --depth 1 git@github.com:<yourname>/argos-cypress.git`
+2. Clone your fork to your local machine: `git clone --depth 1 git@github.com:<your-login>/argos-cypress.git`
 3. Create a branch: `git checkout -b my-topic-branch`
-4. Make your changes, lint, then push to github with: `git push --set-upstream origin my-topic-branch`
-5. Visit github and make your pull request.
+4. Make your changes
+5. Run the tests: `npm run test`
+6. Format and lint the code: `npm run format && npm run lint`
+7. Push your branch to github: `git push --set-upstream origin my-topic-branch`
+8. Visit github and make your pull request.
+
+### Update local repository
 
 If you have an existing local repository, please update it before you start to minimize the chance of merge conflicts.
 
