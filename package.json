@@ -38,6 +38,9 @@
   "dependencies": {
     "cypress-wait-until": "^1.7.2"
   },
+  "peerDependencies": {
+    "cypress": ">=3"
+  },
   "devDependencies": {
     "@argos-ci/cli": "^0.1.2",
     "@argos-ci/cypress": "file:.",
