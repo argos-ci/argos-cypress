@@ -1,6 +1,6 @@
 const screenshotsFolder = Cypress.browser.isHeaded
-  ? `./cypress/screenshots/argos`
-  : `./cypress/screenshots/${Cypress.spec.name}/argos`;
+  ? `./cypress/screenshots`
+  : `./cypress/screenshots/${Cypress.spec.name}`;
 
 describe("argosScreenshot", () => {
   before(() => {
@@ -24,7 +24,7 @@ describe("argosScreenshot", () => {
 
     it("takes a screenshot with generic name", () => {
       cy.readFile(
-        `${screenshotsFolder}/argosScreenshot without name before all hook.png`
+        `${screenshotsFolder}/argosScreenshot -- without name -- waits for loader hiding -- before all hook.png`
       );
     });
   });
