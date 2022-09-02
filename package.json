@@ -31,11 +31,15 @@
     "test": "cypress run",
     "test:open": "cypress open --e2e -b chrome",
     "format": "prettier --write .",
+    "check-format": "prettier --check .",
     "lint": "eslint --ignore-path .gitignore .",
     "release": "standard-version && conventional-github-releaser --preset angular"
   },
   "dependencies": {
     "cypress-wait-until": "^1.7.2"
+  },
+  "peerDependencies": {
+    "cypress": ">=3"
   },
   "devDependencies": {
     "@argos-ci/cli": "^0.1.2",

@@ -19,8 +19,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Lint & Format
-        run: npm run lint && npm run format
+      - name: Lint
+        run: npm run lint
+
+      - name: Check format
+        run: npm run check-format
 
       - name: Test
         run: npm run test

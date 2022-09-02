@@ -54,9 +54,6 @@ function waitUntilNoBusy() {
   );
 }
 
-/**
- * Takes a screenshot for Argos.
- */
 Cypress.Commands.add(
   "argosScreenshot",
   { prevSubject: ["optional", "element", "window", "document"] },
@@ -66,11 +63,10 @@ Cypress.Commands.add(
       name = null;
     }
 
-    const screenshotName = `argos/${name || cy.state("runnable").fullTitle()}`;
     Cypress.log({
       name: "argosScreenshot",
       displayName: `Argos Screenshot`,
-      message: screenshotName,
+      message: name,
     });
     // Inject styles
     cy.document().then((doc) => injectStyles(doc));
@@ -80,7 +76,7 @@ Cypress.Commands.add(
     cy.document().its("fonts.status").should("equal", "loaded");
 
     // Screenshot
-    cy.wrap(subject).screenshot(screenshotName, {
+    cy.wrap(subject).screenshot(name, {
       blackout: ['[data-visual-test="blackout"]'].concat(
         options.blackout || []
       ),
