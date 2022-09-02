@@ -31,6 +31,7 @@
     "test": "cypress run",
     "test:open": "cypress open --e2e -b chrome",
     "format": "prettier --write .",
+    "check-format": "prettier --check .",
     "lint": "eslint --ignore-path .gitignore .",
     "release": "standard-version && conventional-github-releaser --preset angular"
   },
