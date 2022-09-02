@@ -7,10 +7,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
-* add code of conduct ([031fde3](https://github.com/argos-ci/argos-cypress/commit/031fde34b849b5c001c7b91c4365996ccea6cda4))
-* add contributing guide ([f1b2b0d](https://github.com/argos-ci/argos-cypress/commit/f1b2b0d65c78e976c363cd473f9553eba9eb2850))
-* add github templates ([e37e373](https://github.com/argos-ci/argos-cypress/commit/e37e373fb61bfa70542b29bbda33027a49b52776))
-* **contributing:** add test and lint command ([65ba1f1](https://github.com/argos-ci/argos-cypress/commit/65ba1f1cd187e98037169458f313e1d2bfacd4f1))
 * do not take screenshots in argos folder ([27c594e](https://github.com/argos-ci/argos-cypress/commit/27c594ea7c0316a7b9490b73699b1b87e7d8ace3))
 
 
@@ -23,8 +19,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
-* add agos upload ([6f41633](https://github.com/argos-ci/argos-cypress/commit/6f416334879f234f5d18baa8ee08ea469f782ad8))
-* config ci ([b811d74](https://github.com/argos-ci/argos-cypress/commit/b811d74aa90ac0f1216191f2d1ff72c71c1bbffc))
 * respect cypress defaults ([338df6f](https://github.com/argos-ci/argos-cypress/commit/338df6f6225f072306bff2edfa94cefdcc8009f7))
 
 
@@ -34,8 +28,4 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### 0.0.1 (2022-08-30)
 
-
-### Features
-
-* finalize plugin ([7a9752f](https://github.com/argos-ci/argos-cypress/commit/7a9752f429a4298cd81d07652032fc561a676c47))
-* initial plugin version ([5aeddb7](https://github.com/argos-ci/argos-cypress/commit/5aeddb776920d1402f50ef6b074c7b875452a043))
+Initial version
