@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/argos-ci/argos-cypress/compare/v0.0.2...v0.0.3) (2022-09-02)
+
+
+### Features
+
+* add code of conduct ([031fde3](https://github.com/argos-ci/argos-cypress/commit/031fde34b849b5c001c7b91c4365996ccea6cda4))
+* add contributing guide ([f1b2b0d](https://github.com/argos-ci/argos-cypress/commit/f1b2b0d65c78e976c363cd473f9553eba9eb2850))
+* add github templates ([e37e373](https://github.com/argos-ci/argos-cypress/commit/e37e373fb61bfa70542b29bbda33027a49b52776))
+* **contributing:** add test and lint command ([65ba1f1](https://github.com/argos-ci/argos-cypress/commit/65ba1f1cd187e98037169458f313e1d2bfacd4f1))
+* do not take screenshots in argos folder ([27c594e](https://github.com/argos-ci/argos-cypress/commit/27c594ea7c0316a7b9490b73699b1b87e7d8ace3))
+
+
+### Bug Fixes
+
+* **deps:** add peer dependencies ([9fba937](https://github.com/argos-ci/argos-cypress/commit/9fba9376ffe31f5f9b0e77e6e28d25ec15307885))
+
 ### [0.0.2](https://github.com/argos-ci/argos-cypress/compare/v0.0.1...v0.0.2) (2022-08-30)
 
 
