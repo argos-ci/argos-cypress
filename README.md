@@ -20,7 +20,7 @@ import "@argos-ci/cypress/support";
 
 ## Usage
 
-`cy.argosScreenshot` - command stabilizes the UI and takes a screenshot.
+`cy.argosScreenshot` command stabilizes the UI and takes a screenshot.
 
 _How to take a screenshot with `cy.argosScreenshot` command_
 
@@ -36,12 +36,12 @@ describe("Homepage", () => {
 });
 ```
 
-### Configuration
+## API
 
-`cy.argosScreenshot([name][, options])`
+### cy.argosScreenshot([name][, options])
 
 - `name` - The screenshot name; must be unique; default value to test title
-- `options` - Send to [cy.screenshot command options](https://docs.cypress.io/api/commands/screenshot)
+- `options` - See [cy.screenshot command options](https://docs.cypress.io/api/commands/screenshot)
 
 ## Helper attributes
 
