@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/argos-ci/argos-cypress/compare/v0.0.3...v0.0.4) (2022-09-20)
+
+
+### Bug Fixes
+
+* **types:** make argosScreenshot options param optional ([#10](https://github.com/argos-ci/argos-cypress/issues/10)) ([3cee1a6](https://github.com/argos-ci/argos-cypress/commit/3cee1a61b5999708e5d7a1590502a6bfe2427c26))
+
 ### [0.0.3](https://github.com/argos-ci/argos-cypress/compare/v0.0.2...v0.0.3) (2022-09-02)
 
 
