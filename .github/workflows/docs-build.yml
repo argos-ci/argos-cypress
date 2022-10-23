@@ -1,0 +1,13 @@
+name: Trigger https://docs.argos-ci.com build
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Call Netlify Webhook
+        run: curl -X POST -d {} https://api.netlify.com/build_hooks/6355731ceb0bed1962bae7fc

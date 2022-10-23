@@ -1,0 +1,80 @@
+---
+title: Cypress
+slug: /cypress
+---
+
+# Use Argos with Cypress
+
+Integrating Argos with your [Cypress](https://www.cypress.io/) tests to enable visual testing on your application.
+
+Cypress already offers a command to take screenshots. The official Argos Cypress integration uses it but also does several things:
+
+- Wait for all images to be loaded
+- Wait for all fonts to be loaded
+- Wait for no `aria-busy` (loader) elements to be present in the page
+- Hide scrollbars
+- Hide carets
+- Expose CSS helpers to help you hiding content
+
+## Setup
+
+```
+npm install --save-dev @argos-ci/cli @argos-ci/cypress
+```
+
+And add this line to your `cypress/support/index.js` file.
+
+```js
+import "@argos-ci/cypress/support";
+```
+
+## Usage
+
+`cy.argosScreenshot` command stabilizes the UI and takes a screenshot.
+
+_How to take a screenshot with `cy.argosScreenshot` command_
+
+```js
+describe("Homepage", () => {
+  it("screenshots the page", () => {
+    // Screenshot a full page
+    cy.argosScreenshot("home");
+
+    // Screenshot a component
+    cy.get("main div.breadcrumb").argosScreenshot("home-breadcrumb");
+  });
+});
+```
+
+## API
+
+### cy.argosScreenshot([name][, options])
+
+- `name` - The screenshot name; must be unique; default value to test title
+- `options` - See [cy.screenshot command options](https://docs.cypress.io/api/commands/screenshot)
+
+#### Helper attributes
+
+The `data-visual-test` attributes allow you to control how elements behave in the Argos screenshot.
+
+It is often used to hide changing element like dates.
+
+- `[data-visual-test="transparent"]` - Make the element transparent (`opacity: 0`)
+- `[data-visual-test="removed"]` - Remove the element (`display: none`)
+- `[data-visual-test="blackout"]` - Blacked out the element
+
+_How to use an helper to hide a div from a screenshot_
+
+```html
+<div id="clock" data-visual-test="transparent">...</div>
+```
+
+## Upload screenshots to Argos
+
+Before publishing, generate a unique `<project-token>` by [subscribing to Argos](https://github.com/marketplace/argos-ci).
+
+Once you installed the `@argos-ci/cli` package and have a `<project-token>`, run the following command in your project directory.
+
+```
+npx argos upload --token <project-token> screenshots/argos
+```
