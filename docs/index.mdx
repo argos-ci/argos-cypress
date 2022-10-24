@@ -16,11 +16,7 @@ Cypress already offers a command to take screenshots. The official Argos Cypress
 - Hide carets
 - Expose CSS helpers to help you hiding content
 
-## Example
-
-- [Example of Argos + Cypress](https://github.com/argos-ci/argos/tree/main/examples/cypress)
-
-## Setup
+## 1. Setup
 
 ```
 npm install --save-dev @argos-ci/cli @argos-ci/cypress
@@ -32,7 +28,7 @@ And add this line to your `cypress/support/index.js` file.
 import "@argos-ci/cypress/support";
 ```
 
-## Usage
+## 2. Use in your tests
 
 `cy.argosScreenshot` command stabilizes the UI and takes a screenshot.
 
@@ -48,6 +44,16 @@ describe("Homepage", () => {
     cy.get("main div.breadcrumb").argosScreenshot("home-breadcrumb");
   });
 });
+```
+
+## 3. Upload screenshots to Argos
+
+Before publishing, generate a unique `<project-token>` by [subscribing to Argos](https://github.com/marketplace/argos-ci).
+
+Once you installed the `@argos-ci/cli` package and have a `<project-token>`, run the following command in your project directory.
+
+```
+npx argos upload --token <project-token> cypress/screenshots
 ```
 
 ## API
@@ -73,12 +79,8 @@ _How to use an helper to hide a div from a screenshot_
 <div id="clock" data-visual-test="transparent">...</div>
 ```
 
-## Upload screenshots to Argos
+## Resources
 
-Before publishing, generate a unique `<project-token>` by [subscribing to Argos](https://github.com/marketplace/argos-ci).
-
-Once you installed the `@argos-ci/cli` package and have a `<project-token>`, run the following command in your project directory.
-
-```
-npx argos upload --token <project-token> cypress/screenshots
-```
+- [Example of Argos + Cypress](https://github.com/argos-ci/argos/tree/main/examples/cypress)
+- [@argos-ci/cypress on GitHub](https://github.com/argos-ci/argos-cypress)
+- [@argos-ci/cypress on npm](https://www.npmjs.com/package/@argos-ci/cypress)
