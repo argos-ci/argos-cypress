@@ -6,7 +6,7 @@
 
 _Argos is a visual testing solution that fits in your workflow to avoid visual regression. Takes screenshots on each commit and be notified if something changes._
 
-# Official Argos cypress integration
+# Official Argos Cypress integration
 
 [![npm version](https://img.shields.io/npm/v/@argos-ci/cypress.svg)](https://www.npmjs.com/package/@argos-ci/cypress)
 [![npm dm](https://img.shields.io/npm/dm/@argos-ci/cypress.svg)](https://www.npmjs.com/package/@argos-ci/cypress)
