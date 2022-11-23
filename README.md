@@ -17,4 +17,4 @@ Visit [docs.argos-ci.com/cypress](https://docs.argos-ci.com/cypress) for guides,
 ## Links
 
 - [Official SDK Docs](https://docs.argos-ci.com/)
-- [Discord](https://discord.gg/pK79sv85Vg)
+- [Discord](https://discord.gg/WjzGrQGS4A)
