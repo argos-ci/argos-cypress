@@ -19,6 +19,10 @@ const GLOBAL_STYLES = `
   [data-visual-test="removed"] {
     display: none !important;
   }
+
+  [data-test-no-radius] {
+    border-radius: 0 !important;
+  }
 `;
 
 /**
