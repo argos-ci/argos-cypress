@@ -12,9 +12,9 @@ _Argos is a visual testing solution that fits in your workflow to avoid visual r
 [![npm dm](https://img.shields.io/npm/dm/@argos-ci/cypress.svg)](https://www.npmjs.com/package/@argos-ci/cypress)
 [![npm dt](https://img.shields.io/npm/dt/@argos-ci/cypress.svg)](https://www.npmjs.com/package/@argos-ci/cypress)
 
-Visit [docs.argos-ci.com/cypress](https://docs.argos-ci.com/cypress) for guides, API and more.
+Visit [argos-ci.com/docs/cypress](https://argos-ci.com/docs/cypress) for guides, API and more.
 
 ## Links
 
-- [Official SDK Docs](https://docs.argos-ci.com/)
+- [Official SDK Docs](https://argos-ci.com/docs)
 - [Discord](https://discord.gg/WjzGrQGS4A)

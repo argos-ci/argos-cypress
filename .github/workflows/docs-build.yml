@@ -1,4 +1,4 @@
-name: Trigger https://docs.argos-ci.com build
+name: Trigger https://argos-ci.com/docs build
 
 on:
   push:
