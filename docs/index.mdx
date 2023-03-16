@@ -52,6 +52,8 @@ By default screenshots are stored in `cypress/screenshots` folder, relative to c
 
 Look at Argos doc to know [how to configure your CI](https://argos-ci.com/docs/upload-screenshots) to send screenshots to Argos.
 
+As Cypress store the screenshots into the "cypress/screenshots" folder by default, have to specify it when you use Argos CLI command: `npx @argos-ci/cli upload cypress/screenshots`.
+
 ## API
 
 ### cy.argosScreenshot([name][, options])
