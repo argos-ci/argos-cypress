@@ -72,12 +72,27 @@ Cypress.Commands.add(
       displayName: `Argos Screenshot`,
       message: name,
     });
+
     // Inject styles
     cy.document().then((doc) => injectStyles(doc));
+
     // Wait until there is no `[aria-busy="true"]` element on the page.
     waitUntilNoBusy();
+
     // Wait for fonts to be loaded
     cy.document().its("fonts.status").should("equal", "loaded");
+
+    // Wait for images to be loaded
+    cy.waitUntil(() =>
+      cy.document().then((document) => {
+        const allImages = Array.from(document.images);
+        allImages.forEach((img) => {
+          img.loading = "eager";
+          img.decoding = "sync";
+        });
+        return allImages.every((img) => img.complete && img.naturalWidth > 0);
+      })
+    );
 
     // Screenshot
     cy.wrap(subject).screenshot(name, {
