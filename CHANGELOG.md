@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.7](https://github.com/argos-ci/argos-cypress/compare/v0.0.6...v0.0.7) (2023-06-21)
+
+
+### Features
+
+* add default screenshot folder ([044e123](https://github.com/argos-ci/argos-cypress/commit/044e1231589177de0cb48d14fa42c779bf6be2ee))
+* fix old link ([2fa6da0](https://github.com/argos-ci/argos-cypress/commit/2fa6da0da7352255b1531246db87d6e9154cc5e8))
+* stabilize images before screenshot ([#17](https://github.com/argos-ci/argos-cypress/issues/17)) ([0744826](https://github.com/argos-ci/argos-cypress/commit/07448262343cac7570b3be7220ede1188aa9f53b))
+
 ### [0.0.6](https://github.com/argos-ci/argos-cypress/compare/v0.0.5...v0.0.6) (2022-12-01)
 
 
