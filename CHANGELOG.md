@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.8](https://github.com/argos-ci/argos-cypress/compare/v0.0.7...v0.0.8) (2023-09-21)
+
+
+### Features
+
+* disable spellcheck in argosScreenshot ([#19](https://github.com/argos-ci/argos-cypress/issues/19)) ([e8e4144](https://github.com/argos-ci/argos-cypress/commit/e8e41440e97485a5b8995c4c30b460de1828c6a4))
+
 ### [0.0.7](https://github.com/argos-ci/argos-cypress/compare/v0.0.6...v0.0.7) (2023-06-21)
 
 
