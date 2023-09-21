@@ -58,6 +58,36 @@ function waitUntilNoBusy() {
   );
 }
 
+/**
+ * Wait until all images are loaded.
+ */
+function waitForImagesLoading() {
+  cy.waitUntil(() =>
+    cy.document().then((document) => {
+      const allImages = Array.from(document.images);
+      allImages.forEach((img) => {
+        img.loading = "eager";
+        img.decoding = "sync";
+      });
+      return allImages.every((img) => img.complete && img.naturalWidth > 0);
+    })
+  );
+}
+
+/**
+ *  Disable spellcheck on inputs, textareas, and contenteditable elements to avoid red underlines
+ */
+function disableSpellCheck() {
+  cy.document().then((document) => {
+    const query =
+      "[contenteditable]:not([contenteditable=false]):not([spellcheck=false]), input:not([spellcheck=false]), textarea:not([spellcheck=false])";
+    document.querySelectorAll(query).forEach((element) => {
+      element.setAttribute("spellcheck", "false");
+    });
+  });
+  return true;
+}
+
 Cypress.Commands.add(
   "argosScreenshot",
   { prevSubject: ["optional", "element", "window", "document"] },
@@ -83,16 +113,10 @@ Cypress.Commands.add(
     cy.document().its("fonts.status").should("equal", "loaded");
 
     // Wait for images to be loaded
-    cy.waitUntil(() =>
-      cy.document().then((document) => {
-        const allImages = Array.from(document.images);
-        allImages.forEach((img) => {
-          img.loading = "eager";
-          img.decoding = "sync";
-        });
-        return allImages.every((img) => img.complete && img.naturalWidth > 0);
-      })
-    );
+    waitForImagesLoading();
+
+    // Wait for images to be loaded
+    disableSpellCheck();
 
     // Screenshot
     cy.wrap(subject).screenshot(name, {
